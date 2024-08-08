@@ -1,8 +1,9 @@
 "use client";
 
+import React from 'react';
 import CountUp from "react-countup";
 
-const stats = [
+const defaultStats = [
   {
     num: 12,
     text: "Years of Experience",
@@ -21,7 +22,7 @@ const stats = [
   },
 ];
 
-const Stats = () => {
+const Stats = ({ stats = defaultStats }) => {
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="container mx-auto">
