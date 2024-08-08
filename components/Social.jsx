@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaYoutube, FaXTwitter } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaGithub />, path: "" },
-  { icon: <FaLinkedinIn />, path: "" },
-  { icon: <FaYoutube />, path: "" },
-  { icon: <FaTwitter />, path: "" },
+  { icon: <FaGithub />, path: "https://github.com/xskideCode" },
+  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/leon-ndungu-06679428a" },
+  // { icon: <FaYoutube />, path: "" },
+  // { icon: <FaXTwitter />, path: "" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
@@ -14,7 +14,7 @@ const Social = ({ containerStyles, iconStyles }) => {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-          <Link href={item.path} key={index} className={iconStyles}>
+          <Link href={item.path} key={index} className={iconStyles} target="_blank" rel="noopener noreferrer">
             {item.icon}
           </Link>
         );

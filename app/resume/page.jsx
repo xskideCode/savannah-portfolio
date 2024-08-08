@@ -23,23 +23,19 @@ const about = {
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+254) 712 345 678",
+      fieldValue: "(+254) 714 150 582",
     },
     {
       fieldName: "Experience",
       fieldValue: "2+ Years",
     },
     {
-      fieldName: "Skype",
-      fieldValue: "leon.01",
+      fieldName: "Email",
+      fieldValue: "ndunguaspen@gmail.com",
     },
     {
       fieldName: "Nationality",
       fieldValue: "Kenyan",
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "aspenndungu@gmail.com",
     },
     {
       fieldName: "Freelance",
@@ -65,8 +61,8 @@ const experience = {
       duration: "2024 - Present",
     },
     {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
+      company: "Ministry of Education",
+      position: "Full Stack Developer Intern",
       duration: "Summer 2023",
     },
     {

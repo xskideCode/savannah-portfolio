@@ -8,28 +8,28 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
+      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
-      "Our UI/UX design services focus on creating intuitive and user-friendly interfaces for your software applications.",
+      "My UI/UX design services focus on creating intuitive and user-friendly interfaces for your software applications.",
     href: "",
   },
   {
     num: "03",
     title: "Logo Design",
     description:
-      "We help businesses build a strong visual identity with our professional logo design services.",
+      "I help businesses build a strong visual identity with our professional logo design services.",
     href: "",
   },
   {
     num: "04",
     title: "SEO",
     description:
-      "We offer versatile SEO services to help websites boost their organic search score and compete for top rankings.",
+      "I offer versatile SEO services to help websites boost their organic search score and compete for top rankings.",
     href: "",
   },
 ];

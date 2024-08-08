@@ -19,17 +19,17 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+254) 734 567 890",
+    description: "(+254) 714 150 582",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "youremail@gmail.com",
+    description: "ndunguaspen@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Code Corner, Tech Town 13579",
+    description: "Nairobi, Kenya",
   },
 ];
 
@@ -50,7 +50,7 @@ const Contact = () => {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-                Fill the form below to get in touch with us. We'll get back to
+                Fill the form below to get in touch with me. I'll get back to
                 you as soon as possible.
               </p>
               {/* input */}

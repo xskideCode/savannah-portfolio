@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import axios from "axios";
 
 //components
 import Social from "@/components/Social";
@@ -7,6 +10,27 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 const Home = () => {
+
+  const handleDownload = async () => {
+    try {
+      const response = await axios.get('/api/download', {
+        responseType: 'blob',
+      });
+      
+      const blob = new Blob([response.data], { type: 'application/pdf' });
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Leon_Ndungu_CV.pdf');
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading CV:', error);
+    }
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto">
@@ -27,6 +51,7 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
+                onClick={handleDownload}
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
