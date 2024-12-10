@@ -27,7 +27,7 @@ const projects = [
     title: "project 1",
     description:
       "A comprehensive web application designed to connect YouTube creators . This platform allows users to join a vibrant community, share updates, and engage with curated content.",
-    stack: [{ name: "React" }, { name: "Node Js" }, { name: "MongoDb" }],
+    stack: [{ name: "React" }, { name: "Node.js" }, { name: "MongoDb" }],
     image: "/assets/work/thumb4.png",
     live: "https://surge-phi.vercel.app/",
     github: "https://github.com/xskideCode/surge.git",
@@ -52,9 +52,9 @@ const projects = [
     category: "mobile app",
     title: "project 3",
     description:
-      "A full-stack React Native application inspired by Uber. This app provides users with a seamless ride-hailing experience, including real-time map integration, driver and rider matching, and dynamic route calculation.",
-    stack: [{ name: "React Native" }, { name: "PostgreSQL" }],
-    image: "/assets/work/thumb3.png",
+      "A full-stack React Native application designed to empower users with a platform for sharing AI-generated videos. This app enables creators to upload, showcase, and explore innovative AI-driven video content.",
+    stack: [{ name: "React Native" }, { name: "Appwrite" }],
+    image: "/assets/work/thumb6.png",
     live: "",
     github: "https://github.com/xskideCode/aora.git",
   },
@@ -100,10 +100,10 @@ const Work = () => {
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
+                    <li key={index} className="text-xl text-accent break-words">
                       {item.name}
                       {/* remove the last comma */}
                       {index !== project.stack.length - 1 && ","}
