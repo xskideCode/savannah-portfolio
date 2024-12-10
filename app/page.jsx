@@ -10,24 +10,23 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 const Home = () => {
-
   const handleDownload = async () => {
     try {
-      const response = await axios.get('/api/download', {
-        responseType: 'blob',
+      const response = await axios.get("/api/download", {
+        responseType: "blob",
       });
-      
-      const blob = new Blob([response.data], { type: 'application/pdf' });
+
+      const blob = new Blob([response.data], { type: "application/pdf" });
       const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = url;
-      link.setAttribute('download', 'Leon_Ndungu_CV.pdf');
+      link.setAttribute("download", "Leon_Ndungu_CV.pdf");
       document.body.appendChild(link);
       link.click();
       link.parentNode.removeChild(link);
       window.URL.revokeObjectURL(url);
     } catch (error) {
-      console.error('Error downloading CV:', error);
+      console.error("Error downloading CV:", error);
     }
   };
 
@@ -43,7 +42,7 @@ const Home = () => {
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               I excel at crafting elegant digital experiences and I am
-              proficient in various prgramming languages and technologies.
+              proficient in various programming languages and technologies.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
