@@ -1,4 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 //components
@@ -23,6 +24,16 @@ export default function RootLayout({ children }) {
       <body className={jetbrainsMono.variable}>
         <Header />
         <StairTransiton />
+        <Toaster
+          position="top-right"
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              background: "#27272c",
+              color: "white",
+            },
+          }}
+        />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
