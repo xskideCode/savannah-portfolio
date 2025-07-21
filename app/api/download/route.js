@@ -1,22 +1,22 @@
-import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { NextResponse } from "next/server";
+import fs from "fs";
+import path from "path";
 
 export async function GET() {
-  const filePath = path.join(process.cwd(), 'private', 'Leon_Ndungu_CV.pdf');
-  const fileName = 'Leon_Ndungu_CV.pdf';
+  const filePath = path.join(process.cwd(), "private", "Resume_Leon.pdf");
+  const fileName = "Resume_Leon.pdf";
 
   if (fs.existsSync(filePath)) {
     const fileBuffer = fs.readFileSync(filePath);
-    
+
     return new NextResponse(fileBuffer, {
       status: 200,
       headers: {
-        'Content-Disposition': `attachment; filename=${fileName}`,
-        'Content-Type': 'application/pdf',
+        "Content-Disposition": `attachment; filename=${fileName}`,
+        "Content-Type": "application/pdf",
       },
     });
   } else {
-    return NextResponse.json({ error: 'File not found' }, { status: 404 });
+    return NextResponse.json({ error: "File not found" }, { status: 404 });
   }
 }
